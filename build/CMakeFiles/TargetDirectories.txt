@@ -1,0 +1,3 @@
+/home/dezhong/Desktop/Knot_inversion/Overhand_Knots_Snapping/build/CMakeFiles/rebuild_cache.dir
+/home/dezhong/Desktop/Knot_inversion/Overhand_Knots_Snapping/build/CMakeFiles/edit_cache.dir
+/home/dezhong/Desktop/Knot_inversion/Overhand_Knots_Snapping/build/CMakeFiles/simDER.dir

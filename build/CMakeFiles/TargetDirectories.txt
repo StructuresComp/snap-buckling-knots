@@ -1,3 +1,0 @@
-/home/dezhong/Desktop/Knot_inversion/snap-buckling-knots/build/CMakeFiles/rebuild_cache.dir
-/home/dezhong/Desktop/Knot_inversion/snap-buckling-knots/build/CMakeFiles/edit_cache.dir
-/home/dezhong/Desktop/Knot_inversion/snap-buckling-knots/build/CMakeFiles/simDER.dir

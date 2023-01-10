@@ -92,21 +92,3 @@ If our work has helped your research, please cite the following paper.
 }
 
 ```
-
-
-
-
-Compile and build:
-------------------
-
-Instructions for Ubuntu:
-(1) To run this code you need Eigen, OpenGL, Pardiso and Lapack. Lapack is usually preinstalled on your computer. 
-Eigen can be found at http://eigen.tuxfamily.org/index.php?title=Main_Page
-
-
-(3) Open a terminal, "cd" to this folder and run the command "make" (without the quotes).
-
-(4) Compile Command:
-e.g.  g++ -fopenmp -I /usr/local/include/eigen3/  main.cpp world.cpp elasticRod.cpp elasticStretchingForce.cpp elasticBendingForce.cpp elasticTwistingForce.cpp externalGravityForce.cpp inertialForce.cpp dampingForce.cpp timeStepper.cpp setInput.cpp collision.cpp -lGL -lglut -lGLU -lpardiso600-GNU720-X86-64 -llapack -lgfortran -fopenmp -lpthread -lm -Ofast -o simDER
-
-(5) To start the simulation, run the command "export OMP_NUM_THREADS=1;./simDER option.txt" (without the quotes). More on option.txt later.

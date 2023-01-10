@@ -1,4 +1,4 @@
-# Install script for directory: /home/dezhong/Desktop/Knot_inversion/Overhand_Knots_Snapping
+# Install script for directory: /home/dezhong/Desktop/Knot_inversion/snap-buckling-knots
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/dezhong/Desktop/Knot_inversion/Overhand_Knots_Snapping/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/dezhong/Desktop/Knot_inversion/snap-buckling-knots/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

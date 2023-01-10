@@ -10,12 +10,13 @@ This work studies the snap buckling process when tightening an over hand knot. U
 
 
 ## How to Use
+The codes are developed under linux systems. Please use the codes in linux systems.
 
 ### Dependencies
 Install the following C++ dependencies:
 - [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page)
   - Eigen is used for various linear algebra operations.
-  - IMC is built with Eigen version 3.4.0 which can be downloaded [here](https://gitlab.com/libeigen/eigen/-/releases/3.4.0). After downloading the source code, install through cmake as follows.
+  - Simulation codes is built with Eigen version 3.4.0 which can be downloaded [here](https://gitlab.com/libeigen/eigen/-/releases/3.4.0). After downloading the source code, install through cmake as follows.
     ```bash
     cd eigen-3.4.0 && mkdir build && cd build
     cmake ..
@@ -23,7 +24,7 @@ Install the following C++ dependencies:
     ```
 - [Pardiso Solver Project](https://www.pardiso-project.org/)
   - Necessary for access to Pardiso, which is used as a sparse matrix solver.
-  - In linux, Put the .so file under /usr/lib. In Windows, check the link attached in the pardiso solve project title.
+  - Put the downloaded .so file under /usr/lib.
 
 - [OpenGL / GLUT](https://www.opengl.org/)
   - OpenGL / GLUT is used for rendering the knot through a simple graphic.
@@ -46,11 +47,8 @@ make -j4
 
 ### Setting Parameters
 
-All simulation parameters are set through a parameter file ```option.txt```. A template file ```template_option.txt``` is provided that can be used to construct ```option.txt```.
+All simulation parameters are set through a parameter file ```option.txt```. A template file ```option.txt``` is provided that can be used to construct customized ```option.txt```.
 
-```bash
-cp template_option.txt option.txt   # create option.txt
-```
 Specifiable parameters are as follows (we use SI units):
 - ```RodLength``` - Contour length of the rod.
 - ```numVertices``` - Number of nodes on the rod.

@@ -3,18 +3,30 @@
 
 #include "elasticRod.h"
 
+#include "eigenIncludes.h"
+#include "mkl_pardiso.h"
+#include "mkl_types.h"
+#include "mkl_spblas.h"
+
+// Define the format to printf MKL_INT values
+#if !defined(MKL_ILP64)
+#define IFORMAT "%i"
+#else
+#define IFORMAT "%lli"
+#endif
+
 extern "C" void dgbsv_( int* n, int* kl, int* ku, int* nrhs, double* ab, int* ldab, int* ipiv, double* b, int* ldb, int* info );
-
-/* PARDISO prototype. */
-extern "C" void pardisoinit (void   *, int    *,   int *, int *, double *, int *);
-extern "C" void pardiso     (void   *, int    *,   int *, int *,    int *, int *, 
-                  double *, int    *,    int *, int *,   int *, int *,
-                     int *, double *, double *, int *, double *);
-extern "C" void pardiso_chkmatrix  (int *, int *, double *, int *, int *, int *);
-extern "C" void pardiso_chkvec     (int *, int *, double *, int *);
-extern "C" void pardiso_printstats (int *, int *, double *, int *, int *, int *,
-                           double *, int *);
-
+//
+///* PARDISO prototype. */
+//extern "C" void pardisoinit (void   *, int    *,   int *, int *, double *, int *);
+//extern "C" void pardiso     (void   *, int    *,   int *, int *,    int *, int *,
+//                  double *, int    *,    int *, int *,   int *, int *,
+//                     int *, double *, double *, int *, double *);
+//extern "C" void pardiso_chkmatrix  (int *, int *, double *, int *, int *, int *);
+//extern "C" void pardiso_chkvec     (int *, int *, double *, int *);
+//extern "C" void pardiso_printstats (int *, int *, double *, int *, int *, int *,
+//                           double *, int *);
+//
 
 class timeStepper
 {

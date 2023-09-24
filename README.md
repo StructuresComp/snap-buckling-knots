@@ -22,9 +22,22 @@ Install the following C++ dependencies:
     cmake ..
     sudo make install
     ```
-- [Pardiso Solver Project](https://www.pardiso-project.org/)
-  - Necessary for access to Pardiso, which is used as a sparse matrix solver.
-  - Put the downloaded .so file under /usr/lib.
+- [Intel oneAPI Math Kernel Library (oneMKL)](https://www.intel.com/content/www/us/en/developer/tools/oneapi/onemkl-download.html?operatingsystem=linux&distributions=webdownload&options=online)
+    - Necessary for access to Pardiso, which is used as a sparse matrix solver.
+    - Intel MKL is also used as the BLAS / LAPACK backend for Eigen.
+    - If you are using Linux, follow the below steps. Otherwise, click the link above for your OS.
+      ```bash
+      cd /tmp
+      wget https://registrationcenter-download.intel.com/akdlm/irc_nas/18483/l_onemkl_p_2022.0.2.136.sh
+      
+      # This runs an installer, simply follow the instructions.
+      sudo sh ./l_onemkl_p_2022.0.2.136.sh
+      ```
+    - Add the following to your .bashrc. Change the directory accordingly if your MKL version is different.
+      ```bash
+      export MKLROOT=/opt/intel/oneapi/mkl/2022.0.2
+      ```
+
 
 - [OpenGL / GLUT](https://www.opengl.org/)
   - OpenGL / GLUT is used for rendering the knot through a simple graphic.
@@ -83,12 +96,20 @@ If this doesn't work, execute ```chmod +x run.sh``` prior to running.
 If our work has helped your research, please cite the following paper.
 ```
 
-@article{tong2021snap,
-  title={Snap buckling in overhand knots},
-  author={Tong, Dezhong and Choi, Andrew and Joo, Jungseock and Borum, Andy and Jawed, Mohammad Khalid},
-  journal={Journal of Applied Mechanics},
-  pages={1--23},
-  year={2021}
+@article{10.1115/1.4056478,
+    author = {Tong, Dezhong and Choi, Andrew and Joo, Jungseock and Borum, Andy and Khalid Jawed, Mohammad},
+    title = "{Snap Buckling in Overhand Knots}",
+    journal = {Journal of Applied Mechanics},
+    volume = {90},
+    number = {4},
+    pages = {041008},
+    year = {2023},
+    month = {01},
+    issn = {0021-8936},
+    doi = {10.1115/1.4056478},
+    url = {https://doi.org/10.1115/1.4056478},
+    eprint = {https://asmedigitalcollection.asme.org/appliedmechanics/article-pdf/90/4/041008/6975362/jam\_90\_4\_041008.pdf},
 }
+
 
 ```
